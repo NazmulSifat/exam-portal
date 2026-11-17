@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prostuti Exam Portal</title>
+<meta name="description" content="Prostuti Exam Portal – examination routine and exam links.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <img class="logo" src="assets/logo.png" alt="Prostuti logo" width="44" height="44">
+    <div class="brand"><strong>PROSTUTI</strong><span>Exam Portal</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="course-name">
+    <h1 id="course-name">Course</h1>
+    <h2 id="course-title"><span>Routine</span></h2>
+    <p id="course-desc" class="hero-desc"></p>
+    <ul class="stats" aria-label="Exam summary">
+      <li><b id="stat-total">0</b><span>Total Exams</span></li>
+      <li><b id="stat-active">0</b><span>Active Now</span></li>
+      <li><b id="stat-upcoming">0</b><span>Upcoming</span></li>
+      <li><b id="stat-completed">0</b><span>Completed</span></li>
+    </ul>
+  </section>
+
+  <section class="toolbar" aria-label="Search and filter">
+    <label class="sr-only" for="search">Search exams</label>
+    <input id="search" type="search" placeholder="Search by exam title or subject…" autocomplete="off">
+    <div class="chips" role="group" aria-label="Filter by status">
+      <button class="chip" data-filter="all" aria-pressed="true">All Exams</button>
+      <button class="chip" data-filter="upcoming" aria-pressed="false">Upcoming</button>
+      <button class="chip" data-filter="active" aria-pressed="false">Active</button>
+      <button class="chip" data-filter="completed" aria-pressed="false">Completed</button>
+    </div>
+  </section>
+
+  <section id="routine" class="routine" aria-live="polite" aria-label="Examination routine"></section>
+  <noscript><p class="empty">Please enable JavaScript to view the routine.</p></noscript>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <strong>PROSTUTI</strong> Exam Portal · © <span id="year">2026</span> Prostuti. All rights reserved.
+    <small>Exam times follow <span id="tz-label">Asia/Dhaka</span> time.</small>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="js/exams.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
